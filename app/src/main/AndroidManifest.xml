@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.fbrigati.popularemovies_stage2">
+    package="com.example.fbrigati.popularmovies_stage2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +17,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".MovieDetailActivity"
+            android:label="@string/title_MovieActivity_detail"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.fbrigati.popularmovies_stage2.MainActivity" />
+        </activity>
+
+        <activity android:name=".SettingsActivity"
+            android:label="@string/title_SettingsActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.fbrigati.popularmovies_stage2.MainActivity" />
+        </activity>
+
+        <provider
+            android:authorities="com.example.fbrigati.popularmovies_stage2"
+            android:name=".data.MovieProvider" />
     </application>
 
 </manifest>

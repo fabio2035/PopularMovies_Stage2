@@ -1,4 +1,4 @@
-package com.example.fbrigati.popularemovies_stage2;
+package com.example.fbrigati.popularmovies_stage2;
 
 import android.os.Bundle;
 import android.preference.ListPreference;
@@ -13,9 +13,9 @@ public class SettingsActivity extends PreferenceActivity implements Preference.O
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_settings);
 
-        addPreferencesFromResource(R.xml.pref_general);
+        addPreferencesFromResource(com.example.fbrigati.popularmovies_stage2.R.xml.pref_general);
 
-        bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_sort_key)));
+        bindPreferenceSummaryToValue(findPreference(getString(com.example.fbrigati.popularmovies_stage2.R.string.pref_sort_key)));
 
     }
 

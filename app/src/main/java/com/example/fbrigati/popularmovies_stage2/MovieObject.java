@@ -1,4 +1,4 @@
-package com.example.fbrigati.popularemovies_stage2;
+package com.example.fbrigati.popularmovies_stage2;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -9,7 +9,7 @@ import android.os.Parcelable;
 
 public class MovieObject implements Parcelable {
 
-
+    String movid;
     String title;
     String original_title;
     String overview;
@@ -17,12 +17,15 @@ public class MovieObject implements Parcelable {
     String poster_path;
     String backdrop_path;
     String vote_average;
+    String popularity;
 
-    public MovieObject(String iTitle, String iOriginal_title,
+    public MovieObject(String iMovid, String iTitle, String iOriginal_title,
                        String iOverview, String iRelease_date,
                        String iPoster_path,
                        String iBackdrop_path,
-                       String iVote_average){
+                       String iVote_average,
+                       String iPopularity){
+        this.movid = iMovid;
         this.title = iTitle;
         this.original_title = iOriginal_title;
         this.overview = iOverview;
@@ -30,6 +33,7 @@ public class MovieObject implements Parcelable {
         this.poster_path = iPoster_path;
         this.backdrop_path = iBackdrop_path;
         this.vote_average = iVote_average;
+        this.popularity = iPopularity;
     }
 
     public String getTitle() {
